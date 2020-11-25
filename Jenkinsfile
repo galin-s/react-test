@@ -16,7 +16,7 @@ pipeline {
     }
     stage('Serve') {
       steps {
-        sh 'sudo serve -s build'
+        sh 'serve -s build'
       }
     }
   }
