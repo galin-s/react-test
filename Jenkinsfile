@@ -11,19 +11,6 @@ pipeline {
       }
     }
      
-    stage('Build') {
-      steps {
-        sh 'npm install'
-      }
-    }  
-    
-            
-    stage('Test') {
-      steps {
-        sh 'node test'
-      }
-    }
-
     stage('Deliver') {
       steps {
       sh 'npm run build'
