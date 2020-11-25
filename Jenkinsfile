@@ -23,5 +23,9 @@ pipeline {
         sh 'node test'
       }
     }
+
+    stage('Deliver') {
+      sh 'npm run build'
+    }
   }
 }
