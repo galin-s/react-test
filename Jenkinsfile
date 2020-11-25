@@ -14,6 +14,12 @@ pipeline {
         sh 'npm run  build'
       }
     }
+stage('Serve') {
 
+steps {
+
+sh '  npm install -g serve'
+}
+}
   }
 }
