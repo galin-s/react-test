@@ -5,6 +5,7 @@ pipeline {
     
   stages {
         
+
     stage('Git') {
       steps {
         git 'https://github.com/galin-s/react-test'
