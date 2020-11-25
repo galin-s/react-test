@@ -1,7 +1,7 @@
 pipeline {
   agent any
     
-  tools {nodejs "node"}
+  tools {nodejs "NodeJS-15.3.0"}
     
   stages {
         
@@ -14,7 +14,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'npm install'
-         sh '<<Build Command>>'
+        sh '<<Build Command>>'
       }
     }  
     
