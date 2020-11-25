@@ -17,12 +17,12 @@ pipeline {
 
     stage('Install serve') {
       steps {
-        sh 'npm install -g serve'
+        sh 'sudo npm install -g serve'
       }
     }
     stage('Serve') {
       steps {
-        sh 'serve -s build'
+        sh 'sudo serve -s build'
       }
     }
   }
