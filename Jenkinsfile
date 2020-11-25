@@ -14,12 +14,6 @@ pipeline {
         sh 'npm run  build'
       }
     }
-
-    stage('Install serve') {
-      steps {
-        sh 'sudo npm install -g serve'
-      }
-    }
     stage('Serve') {
       steps {
         sh 'sudo serve -s build'
