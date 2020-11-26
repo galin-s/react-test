@@ -16,7 +16,7 @@ pipeline {
     }
     stage('Serve') {
       steps {
-        sh 'serve -s build -l 4005'
+        sh 'serve -s build -l 4006'
       }
     }
   }
