@@ -1,26 +1,22 @@
 pipeline {
   agent any
     
-  tools {nodejs "NodeJS-15.3.0"}
-    
   stages {
-        
-    stage('Git') {
-      steps {
-        git 'https://github.com/galin-s/react-test'
-      }
-    }
-     
-    stage('Build') {
+
+    stage('Install') {
       steps {
         sh 'npm install'
       }
-    }  
-    
-            
-    stage('Test') {
+    }
+
+    stage('Build') {
       steps {
-        sh 'node test'
+        sh 'npm run build'
+      }
+    }
+    stage('Serve') {
+      steps {
+        sh 'serve -s build -l 4006'
       }
     }
   }
