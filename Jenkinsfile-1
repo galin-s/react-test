@@ -17,6 +17,9 @@ pipeline {
     stage('Serve') {
       steps {
         sh 'node -v'
+
+
+
       }
     }
   }
